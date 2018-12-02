@@ -1,0 +1,12 @@
+{% extends "mysite/wrapper.html" %}
+
+{% block title %} Пост №{{ articles.id }} {% endblock %}
+{% load staticfiles %}
+{% block body %}
+    <div class="news_post">
+    <h2>{{ articles.title }}</h2>
+    <h6>Опубликовано: {{ articles.date|date:"Y-m-d в H:i:s" }} </h6>
+    <br>
+    <p>{{ articles.post }}</p>
+    </div>
+{% endblock %}

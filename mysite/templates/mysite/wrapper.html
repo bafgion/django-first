@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+    <title>{% block title %}{% endblock %}</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/main.css'%}">
+</head>
+<body>
+<header>
+    <div class="logo">
+        <a href="/"><img class = "grafic-logo" src="{% static 'mysite/image/tsentroteh-logo.png' %}"></a><img class="head-icon" width="30" height="30" src="{% static 'mysite/image/earth.png' %}"><p class="info">624130, Свердловская область,<br> Новоуральск, Дзержинского 2</p><img class="head-icon" width="30" height="30" src="{% static 'mysite/image/message.png' %}"><p class = "info2">
+        adm@ugcmp.ru</p> <div align="right" class="info3"><b>8(343)705-40-45</b><br><div class="inf-txt">доб. 1005</div></div><a href="http://www.rosatom.ru/"><img height="55" width="60" class="logo-com" src="{% static 'mysite/image/росатом-лого.png' %}"></a><a href="http://www.tvel.ru/"><img height="55" width="60" class="logo-com2" src="{% static 'mysite/image/лого-твэл.png' %}"></a>
+    </div>
+    <nav>
+        <div class="topnav" id="myTopnav">
+            <a href="/"><b>Главная</b></a>
+            <a href="/news"><b>Новости</b></a>
+            <a href="/contact"><b>Контакты</b></a>
+            <a href="/reset"><b>Обратная связь</b></a>
+        </div>
+    </nav>
+</header>
+<main>
+{% block body %}
+{% endblock %}
+</main>
+<footer>
+    <nav>
+        <a href="/"><b>Главная</b></a>
+        <a href="/news"><b>Новости</b></a>
+        <a href="/contact"><b>Контакты</b></a>
+        <a href="/reset"><b>Обратная связь</b></a>
+    </nav>
+    <div class="social">
+        <a href="/"><img width="35" height="35" src="{% static 'mysite/image/twitter.png' %}"></a>
+        <a href="/"><img width="35" height="35" src="{% static 'mysite/image/facebook.png' %}"></a>
+        <a href="/"><img width="35" height="35" src="{% static 'mysite/image/vk.png' %}"></a>
+        <a href="/"><img width="35" height="35" src="{% static 'mysite/image/ok.png' %}"></a>
+    </div>
+    <br>
+    <p>Все права защищены! 2018 &copy;</p>
+</footer>
+
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+</body>
+</html>

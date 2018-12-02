@@ -1,0 +1,26 @@
+{% extends "mysite/wrapper.html" %}
+
+{% block title %} Обратная связь {% endblock %}
+{% load staticfiles %}
+{% block body %}
+    <div class="texti">
+        <h4><b>Обратная связь</b></h4>
+        <h6>Хотите работать с нами или Вам нужно больше информации о продукции?<br>
+            Напишите нам – будем рады ответить.</h6>
+    </div>
+    <div class="block col-sm-7 ti_animate">
+    <form class="contact-form" action="{% url 'reset_user' %}" method="post">
+        {% csrf_token %}
+        <div class = test>
+            <p class="contact-for-name"><input class="form-control" name="Imya" placeholder="Как к вам обращаться?" type="text" required size="30"></p>
+            <p class="contact-for-company"><input size="30" class="form-control" name="Company" placeholder="Компания" type="text"></p>
+            <p class="contact-for-email"><input size="30" class="form-control" name="Email" placeholder="Email" type="email" required></p>
+            <p class="contact-for-phone"><input size="30" class="form-control" name="Phone" placeholder="Телефон" type="text" required></p>
+            <p class="contact-for-message"><textarea rows="15" class="form-control" name="Message" placeholder="Сообщение..." type="" required></textarea></p>
+        </div>
+        <div class="btn-group">
+            <input class="theme_btn" type="submit" value="Отправить">
+        </div>
+    </form>
+    </div>
+{% endblock %}
